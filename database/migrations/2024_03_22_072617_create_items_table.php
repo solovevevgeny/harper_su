@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string("article")->fillable();
             $table->string("crosses")->fillable();
             $table->string("comment")->nullable()->default(null);
+            $table->tinyInteger("active")->default(1);
             $table->timestamps();
         });
     }
