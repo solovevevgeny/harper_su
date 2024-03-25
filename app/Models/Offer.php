@@ -12,6 +12,8 @@ class Offer extends Model
 {
     use HasFactory;
 
+    protected $hidden = ['created_at', 'updated_at'];
+
     public function warehouse() {
         return $this->hasOne(Warehouse::class, 'id', 'warehouse_id');
     }
