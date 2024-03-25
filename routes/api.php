@@ -22,3 +22,4 @@ use App\Http\Controllers\ItemsController;
 
 
 Route::GET('/items', [ItemsController::class, 'index']) -> name('items.active');
+Route::GET('/items_offers', [ItemsController::class, 'withOffers']) -> name('items.offers');

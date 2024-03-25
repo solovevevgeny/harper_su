@@ -17,4 +17,10 @@ class ItemsController extends Controller
             return response([],404);
         }
     }
+
+    public function withOffers() {
+        $items = Item::with('Offers')->get();
+        return response($items);
+    }
+
 }
