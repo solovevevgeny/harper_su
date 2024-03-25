@@ -19,7 +19,7 @@ class ItemsController extends Controller
     }
 
     public function withOffers() {
-        $items = Item::with(['Offers', 'Offers.warehouse', 'Offers.prices'])->get();
+        $items = Item::with(['Offers', 'Offers.warehouse', 'Offers.prices', 'Offers.prices.price_type'])->get();
         return response($items);
     }
 
