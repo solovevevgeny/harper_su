@@ -25,4 +25,4 @@ Route::GET('/items', [ItemsController::class, 'index']) -> name('items.active');
 Route::GET('/items_offers', [ItemsController::class, 'withOffers']) -> name('items.offers');
 
 
-Route::GET('/menu/{menu_type}', [MenuController::class, 'menuType'])->name('menu.footer');
+Route::GET('/menu/{menu_type}', [MenuController::class, 'menuType'])->name('menu');

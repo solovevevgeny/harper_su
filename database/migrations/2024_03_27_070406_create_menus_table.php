@@ -17,7 +17,6 @@ return new class extends Migration
             $table->integer("parent_id")->nullable()->default(0);
             $table->string("title")->fillable();
             $table->string("url")->nullable();
-            $table->string("position")->fillable();
             $table->integer("order")->default(0);
             $table->timestamps();
         });
