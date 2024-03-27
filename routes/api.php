@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ItemsController;
+use App\Http\Controllers\MenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,8 @@ use App\Http\Controllers\ItemsController;
 //     return $request->user();
 // });
 
-
 Route::GET('/items', [ItemsController::class, 'index']) -> name('items.active');
 Route::GET('/items_offers', [ItemsController::class, 'withOffers']) -> name('items.offers');
+
+
+Route::GET('/menu/{menu_type}', [MenuController::class, 'menuType'])->name('menu.footer');
